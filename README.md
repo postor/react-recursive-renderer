@@ -28,14 +28,14 @@ const Ul: FC<RecursiveProps> = ({
 
 const Index = () => {
   return (<Container
-    Component={Ul}
+    Component={Ul /* nested component */}
     getChildrenProps={({ val }) => {
       return new Array(3).fill(0).map((x, i) => ({
         val: val * 10 + i + 1
       }))
-    }}
-    depthLimit={3}
-    rootProps={{ val: 1 }} />)
+    } /* function that recursively get nested children props */}
+    depthLimit={3 /* depth limit, -1 for no limit */}
+    rootProps={{ val: 1 } /* inital props for top level */} />)
 }
 
 export default Index
