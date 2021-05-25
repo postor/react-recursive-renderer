@@ -1,0 +1,6 @@
+!dist
+pages
+tsconfig.*
+next-env.d.ts
+.next
+*.gif
